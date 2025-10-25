@@ -1,0 +1,24 @@
+"""
+mcp_agent.py — Optional Challenge 1: AI + MCP Brain
+Stub showing how you might integrate an LLM + MCP server for planning.
+"""
+
+# Pseudocode for illustration only
+
+def ai_plan(goal, page_state):
+    """
+    goal: "Find the cheapest blue shirt on this site."
+    page_state: structured JSON from Playwright MCP server.
+    Returns: list of structured actions.
+    """
+    plan = [
+        {"action": "goto", "url": "https://example.com"},
+        {"action": "search", "query": "blue shirt"},
+        {"action": "click", "target": "lowest price"},
+        {"action": "report", "field": "price"}
+    ]
+    return plan
+
+def execute_plan(plan):
+    for step in plan:
+        print(f"Executing: {step}")
